@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="gamehubstyle.css" rel="stylesheet">
+<div style="background-image:  url('marblebackground.jpg');background-repeat: repeat-x;">
+  
+    <title>Gamehub</title>
+</head>
+<body>
+  <br><br><br><br><br><br><br><br><br><br><br><p class="title"> GAMEHUB </p>
+   <p class="para">TAKE A JOURNEY TO A PLACE WHERE ALL GOOD GAMES GATHER</p><br><br><br><br><br><br>
+   <div><br><a href="#container" ><div class="browse">BROWSE GAMES</div></a></div><br><br><br><br><br><br><br><br><br><br><br><br><br>
+   <p class="para" style="border: solid; border-style: groove;border-width: 10px;width: 700px; margin: auto; height: 60px; padding: 5px;">CHOOSE A PERFECT GAME FOR AN EXTREME ADVENTURE BELOW</p><br>
+  </div>
+   <div style="height: 800px;background-image: url('landscape.png');background-repeat:repeat-x;background-position: bottom right;background-size: 100%;">
+   <div id="container" > 
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+      <div class="videohead" style="text-align: center;">
+        <a href="#one"><video loop="loop" autoplay="autoplay" muted width="100%" style="text-align: center;" style="margin-inline: 100px;"> 
+        <source src="lolvideo.mp4" type="video/mp4" />
+        </video></a>
+        <a href="#one"><img src="lolimage.png" class="logo" width="70%"></a>
+        </div>
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+      <div class="videohead" style="text-align: center;">
+        <a href="#two"><video loop="loop" autoplay="autoplay" muted width="100%" style="text-align: center;" style="margin-inline: 100px;"> 
+        <source src="genshinvideo.mp4" type="video/mp4" />
+        </video></a>
+        <a href="#two"><img src="genshinimage.png" class="logo" width="50%" style="opacity: 70%;"></a>
+        </div>
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+      <div class="videohead" style="text-align: center;">
+        <a href="#three"><video loop="loop" autoplay="autoplay" muted width="100%" style="text-align: center;" style="margin-inline: 100px;"> 
+        <source src="valorantvideo.mp4" type="video/mp4" />
+        </video></a>
+        <a href="#three"><img src="valorantimage.png" class="logo" width="70%"></a>
+        </div>
+    </div>
+      
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+      <div class="videohead" style="text-align: center;">
+        <a href="#four"><video loop="loop" autoplay="autoplay" muted width="100%" style="text-align: center;" style="margin-inline: 100px;"> 
+        <source src="dota2video.mp4" type="video/mp4" />
+        </video></a>
+        <a href="#four"><img src="dota2image.png" class="logo" width="50%"></a>
+        </div>
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+      <div class="videohead" style="text-align: center;">
+        <a href="#five"><video loop="loop" autoplay="autoplay" muted width="100%" style="text-align: center;" style="margin-inline: 100px;"> 
+        <source src="minecraftvideo.mp4" type="video/mp4" />
+        </video></a>
+        <a href="#five"><img src="minecraftimage.png" class="logo" width="70%"></a>
+        </div>
+    </div>
+
+      
+    <div class="mySlides">
+      <div class="numbertext">6 / 6</div>
+      <div class="videohead" style="text-align: center;">
+        <a href="#six"><video loop="loop" autoplay="autoplay" width="100%" style="text-align: center;" style="margin-inline: 100px;"> 
+        <source src="apexvideo.mp4" type="video/mp4" />
+        </video></a>
+        <a href="#six"><img src="apeximage.png" class="logo" width="40%"></a>
+        </div>
+    </div>
+      
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+  
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+  
+    <div class="row">
+      <div class="column">
+        <img class="demo cursor" src="lolslide.jpeg" style="width:100%" onclick="currentSlide(1)" alt="League of Legends">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="genshinimpactslide.jpg" style="width:100%" onclick="currentSlide(2)" alt="Genshin Impact">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="valorantslide.jpg" style="width:100%" onclick="currentSlide(3)" alt="Valorant">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="dota2slide.jpg" style="width:100%" onclick="currentSlide(4)" alt="Dota 2">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="minecraftslide.jpeg" style="width:100%" onclick="currentSlide(5)" alt="Minecraft">
+      </div>    
+      <div class="column">
+        <img class="demo cursor" src="apexslide.jpg" style="width:100%" onclick="currentSlide(6)" alt="Apex Legends">
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  <script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("demo");
+    let captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+  }
+  </script>
+
+<div style="height:300px; background-image:linear-gradient(#9C8A66,black 80%)"></div>
+
+ <div id="one">
+
+  <p class="center"><img src="lolimage.png" alt="ATTENDANCE LINK" width=40%></p> 
+  <br><br><br><div class="textbox" style="color:white"> An exciting PvP where ten players will be competing in a 5v5 action to defend their nexus turret </div>  
+  <br><a href="Leagueoflegends.html" target=”_blank”><div class="detail">MORE DETAIL</div></a>
+  
+</div>  
+
+ <div id="two">
+
+  <p class="center"><img src="genshinimage.png" alt="ATTENDANCE LINK" width=50%></p>
+  <br><br><br><div class="textbox" style="color:white">Takes place in the fantasy world which is tied to a different element and ruled by a different god </div>  
+  <br><a href="genshinimpact.html" target=”_blank”><div class="detail">MORE DETAIL</div></a>
+    
+ </div>  
+ 
+ <div id="three">
+   <p class="center"><img src="valorantimage.png" alt="ATTENDANCE LINK" width=60%></p>  
+   <br><br><br><div class="textbox" style="color:white">   Play as one of a set of Agents designed based on several countries and cultures around the world </div>  
+   <br><a href="valorant.html" target=”_blank”><div class="detail">MORE DETAIL</div></a>
+      
+ </div> 
+
+ <div id="four">
+   <p class="center"><img src="dota2image.png" alt="ATTENDANCE LINK" width=30% style="padding: 20px;"></p> 
+   <br><br><br><div class="textbox" style="color:black">   Two teams of five players with each team occupying and defending their own separate base on the map </div>  
+   <br><a href="dota2.html" target=”_blank”><div class="detail">MORE DETAIL</div></a>
+      
+ </div> 
+ 
+ <div id="five">
+  <p class="center"><img src="minecraftimage.png" alt="ATTENDANCE LINK" width=70% style="padding: 50px;"></p>  
+  <br><br><br><div class="textbox" style="color:black"> Explore a blocky and procedurally generated 3D world with virtually infinite terrain and may discover raw materials </div>  
+  <br><a href="minecraft.html" target=”_blank”><div class="detail">MORE DETAIL</div></a>
+     
+</div> 
+
+<div id="six">
+  <p class="center"><img src="apeximage.png" alt="ATTENDANCE LINK" width=30% style="padding: 40px;"></p>  
+  <br><br><br><div class="textbox" style="color:black"> Land on an island and search for weapons and supplies before attempting to defeat all other players in combat </div>  
+  <br><a href="apexlegend.html" target=”_blank”><div class="detail">MORE DETAIL</div></a>
+     
+</div> 
+
+</body>
+
+</html>
+
